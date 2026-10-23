@@ -1,0 +1,148 @@
+{
+  "schema": "liangyou.resource-lab/1.0",
+  "id": "MediaProfiles",
+  "title": "良友影视质量优选规则",
+  "updated": "2026-10-23",
+  "resourceType": "video-quality-preferences",
+  "importType": "reference-not-radarr-sonarr-profile",
+  "repository": "https://github.com/MaddestAlistar/MediaProfiles",
+  "count": 3,
+  "profiles": [
+    {
+      "id": "balanced-4k",
+      "name": "均衡 4K",
+      "profileUrl": "https://raw.githubusercontent.com/MaddestAlistar/MediaProfiles/main/profiles/balanced-4k.json",
+      "rules": {
+        "schema": "liangyou-media-preferences/0.1",
+        "name": "均衡 4K",
+        "kind": "reference-only-not-radarr-sonarr-import",
+        "id": "balanced-4k",
+        "base": {
+          "uhd-remux": 1000,
+          "1080p-remux": 650,
+          "2160p-webdl": 570,
+          "2160p-webrip": 500,
+          "1080p-bluray": 420,
+          "1080p-webdl": 350,
+          "720p": 120,
+          "unknown": 0
+        },
+        "bonus": {
+          "dolby-vision": 65,
+          "hdr10": 25,
+          "atmos": 55,
+          "truehd": 45,
+          "dts-hd-ma": 25,
+          "hevc": 15,
+          "10bit": 12
+        },
+        "penalties": {
+          "cam": -2000,
+          "telesync": -1500
+        },
+        "maxGB": 0
+      }
+    },
+    {
+      "id": "storage-saver",
+      "name": "容量优先",
+      "profileUrl": "https://raw.githubusercontent.com/MaddestAlistar/MediaProfiles/main/profiles/storage-saver.json",
+      "rules": {
+        "schema": "liangyou-media-preferences/0.1",
+        "name": "容量优先",
+        "kind": "reference-only-not-radarr-sonarr-import",
+        "id": "storage-saver",
+        "base": {
+          "uhd-remux": 470,
+          "1080p-remux": 390,
+          "2160p-webdl": 520,
+          "2160p-webrip": 480,
+          "1080p-bluray": 550,
+          "1080p-webdl": 580,
+          "720p": 220,
+          "unknown": 0
+        },
+        "bonus": {
+          "dolby-vision": 30,
+          "hdr10": 20,
+          "atmos": 20,
+          "truehd": 10,
+          "dts-hd-ma": 10,
+          "hevc": 60,
+          "10bit": 16
+        },
+        "penalties": {
+          "cam": -2000,
+          "telesync": -1500
+        },
+        "maxGB": 16
+      }
+    },
+    {
+      "id": "remux-first",
+      "name": "原盘优先",
+      "profileUrl": "https://raw.githubusercontent.com/MaddestAlistar/MediaProfiles/main/profiles/remux-first.json",
+      "rules": {
+        "schema": "liangyou-media-preferences/0.1",
+        "name": "原盘优先",
+        "kind": "reference-only-not-radarr-sonarr-import",
+        "id": "remux-first",
+        "base": {
+          "uhd-remux": 1400,
+          "1080p-remux": 900,
+          "2160p-webdl": 650,
+          "2160p-webrip": 510,
+          "1080p-bluray": 410,
+          "1080p-webdl": 310,
+          "720p": 110,
+          "unknown": 0
+        },
+        "bonus": {
+          "dolby-vision": 70,
+          "hdr10": 35,
+          "atmos": 75,
+          "truehd": 80,
+          "dts-hd-ma": 55,
+          "hevc": 10,
+          "10bit": 15
+        },
+        "penalties": {
+          "cam": -2000,
+          "telesync": -1500
+        },
+        "maxGB": 0
+      }
+    }
+  ],
+  "examples": [
+    {
+      "title": "Example.Movie.2026.2160p.UHD.BluRay.REMUX.DV.Atmos.TrueHD.7.1",
+      "size_gb": 68
+    },
+    {
+      "title": "Example.Movie.2026.2160p.WEB-DL.HDR10.HEVC.10bit.DDP5.1",
+      "size_gb": 14
+    },
+    {
+      "title": "Example.Movie.2026.1080p.BluRay.REMUX.DTS-HD.MA",
+      "size_gb": 27
+    },
+    {
+      "title": "Example.Movie.2026.1080p.WEB-DL.H264",
+      "size_gb": 5.2
+    },
+    {
+      "title": "Example.Movie.2026.720p.CAM.XVID",
+      "size_gb": 1.1
+    }
+  ],
+  "resources": {
+    "scoringScript": "https://raw.githubusercontent.com/MaddestAlistar/MediaProfiles/main/scripts/score_releases.py",
+    "examplesJSON": "https://raw.githubusercontent.com/MaddestAlistar/MediaProfiles/main/examples/releases.json"
+  },
+  "notes": [
+    "JSON 中包含三套独立参考规则及评分样例",
+    "不能直接作为 Radarr/Sonarr 的原生质量配置导入",
+    "文件名规则不等于真实媒体属性"
+  ]
+}

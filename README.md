@@ -4,6 +4,12 @@
 
 把经常讨论的 **4K / UHD REMUX / Blu-ray / WEB-DL / DV / HDR10 / Atmos / TrueHD / DTS-HD MA / HEVC** 转为可读的**片源候选评分参考**。
 
+## JSON 资源入口
+
+**[获取三套影视偏好合辑 JSON](https://raw.githubusercontent.com/MaddestAlistar/MediaProfiles/main/index.json)**
+
+`index.json` 包含已有三套偏好规则的完整配置对象和各自文件 URL，开发者可解析其中 `profiles[].rules` 直接读取；它不是 Radarr/Sonarr 原生可导入格式，原有的单独 JSON 文件保持不变。
+
 ## 三套独立偏好方案
 
 | 文件 | 定位 | 示例 |
