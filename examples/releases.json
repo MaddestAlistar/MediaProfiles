@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Example.Movie.2026.2160p.UHD.BluRay.REMUX.DV.Atmos.TrueHD.7.1",
+    "size_gb": 68
+  },
+  {
+    "title": "Example.Movie.2026.2160p.WEB-DL.HDR10.HEVC.10bit.DDP5.1",
+    "size_gb": 14
+  },
+  {
+    "title": "Example.Movie.2026.1080p.BluRay.REMUX.DTS-HD.MA",
+    "size_gb": 27
+  },
+  {
+    "title": "Example.Movie.2026.1080p.WEB-DL.H264",
+    "size_gb": 5.2
+  },
+  {
+    "title": "Example.Movie.2026.720p.CAM.XVID",
+    "size_gb": 1.1
+  }
+]

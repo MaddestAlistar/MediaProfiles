@@ -1,0 +1,30 @@
+{
+  "schema": "liangyou-media-preferences/0.1",
+  "name": "容量优先",
+  "kind": "reference-only-not-radarr-sonarr-import",
+  "id": "storage-saver",
+  "base": {
+    "uhd-remux": 470,
+    "1080p-remux": 390,
+    "2160p-webdl": 520,
+    "2160p-webrip": 480,
+    "1080p-bluray": 550,
+    "1080p-webdl": 580,
+    "720p": 220,
+    "unknown": 0
+  },
+  "bonus": {
+    "dolby-vision": 30,
+    "hdr10": 20,
+    "atmos": 20,
+    "truehd": 10,
+    "dts-hd-ma": 10,
+    "hevc": 60,
+    "10bit": 16
+  },
+  "penalties": {
+    "cam": -2000,
+    "telesync": -1500
+  },
+  "maxGB": 16
+}

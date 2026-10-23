@@ -1,0 +1,30 @@
+{
+  "schema": "liangyou-media-preferences/0.1",
+  "name": "均衡 4K",
+  "kind": "reference-only-not-radarr-sonarr-import",
+  "id": "balanced-4k",
+  "base": {
+    "uhd-remux": 1000,
+    "1080p-remux": 650,
+    "2160p-webdl": 570,
+    "2160p-webrip": 500,
+    "1080p-bluray": 420,
+    "1080p-webdl": 350,
+    "720p": 120,
+    "unknown": 0
+  },
+  "bonus": {
+    "dolby-vision": 65,
+    "hdr10": 25,
+    "atmos": 55,
+    "truehd": 45,
+    "dts-hd-ma": 25,
+    "hevc": 15,
+    "10bit": 12
+  },
+  "penalties": {
+    "cam": -2000,
+    "telesync": -1500
+  },
+  "maxGB": 0
+}

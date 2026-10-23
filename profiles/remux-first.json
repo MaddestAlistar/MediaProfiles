@@ -1,0 +1,30 @@
+{
+  "schema": "liangyou-media-preferences/0.1",
+  "name": "原盘优先",
+  "kind": "reference-only-not-radarr-sonarr-import",
+  "id": "remux-first",
+  "base": {
+    "uhd-remux": 1400,
+    "1080p-remux": 900,
+    "2160p-webdl": 650,
+    "2160p-webrip": 510,
+    "1080p-bluray": 410,
+    "1080p-webdl": 310,
+    "720p": 110,
+    "unknown": 0
+  },
+  "bonus": {
+    "dolby-vision": 70,
+    "hdr10": 35,
+    "atmos": 75,
+    "truehd": 80,
+    "dts-hd-ma": 55,
+    "hevc": 10,
+    "10bit": 15
+  },
+  "penalties": {
+    "cam": -2000,
+    "telesync": -1500
+  },
+  "maxGB": 0
+}
